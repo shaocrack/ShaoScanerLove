@@ -25,6 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
           callback();
         }
       }
-    }, 3000);
+    }, 1000);
   }
   
