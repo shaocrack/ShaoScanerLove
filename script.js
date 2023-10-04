@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
               window.location.href = "otra_pagina.html";
             }, 1000); // Redirige después de 1 segundo (para demostración)
           }
-        }, 1000);
+        }, 3000);
       });
-    }, 4000);
+    }, 2000);
   });
   
