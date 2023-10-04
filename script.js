@@ -3,28 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
       document.getElementById("message").innerHTML = "Ponga su dedo";
       document.getElementById("message").classList.remove("hidden");
-      // Iniciar cuenta regresiva de 10 segundos para el escaneo
-      countdown(10, function () {
-        // Cuando termine la cuenta regresiva, cambia el mensaje y redirige
-        document.getElementById("message").innerHTML = "LISTO C:";
-        setTimeout(function () {
-          window.location.href = "otra_pagina.html";
-        }, 100); // Redirige después de 10 segundos
+      // Agregar evento de mouseenter al escáner
+      var scanner = document.querySelector(".scanner");
+      scanner.addEventListener("mouseenter", function () {
+        var countdownTimer;
+        // Iniciar cuenta regresiva de 10 segundos cuando el mouse entra en el escáner
+        var seconds = 10;
+        countdownTimer = setInterval(function () {
+          document.getElementById("message").innerHTML = "ESCANEANDO: " + seconds + "s";
+          seconds--;
+          if (seconds < 0) {
+            clearInterval(countdownTimer);
+            // Cuando termine la cuenta regresiva, cambia el mensaje y redirige
+            document.getElementById("message").innerHTML = "LISTO C:";
+            setTimeout(function () {
+              window.location.href = "otra_pagina.html";
+            }, 1000); // Redirige después de 1 segundo (para demostración)
+          }
+        }, 1000);
       });
     }, 2000);
   });
-  
-  function countdown(seconds, callback) {
-    var display = document.getElementById("message");
-    var interval = setInterval(function () {
-      display.innerHTML = "ESCANEANDO: " + seconds + "s";
-      seconds--;
-      if (seconds < 0) {
-        clearInterval(interval);
-        if (typeof callback === "function") {
-          callback();
-        }
-      }
-    }, 1000);
-  }
   
