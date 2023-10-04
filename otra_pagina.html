@@ -70,6 +70,20 @@
         margin-bottom: 10px;
         text-align: center;
       }
+      #regresarBtn {
+        background-color: #FF5733; /* Color de fondo del botón */
+        color: white; /* Color del texto */
+        padding: 10px 20px; /* Espaciado interno */
+        font-size: 18px; /* Tamaño de fuente */
+        border: none; /* Quita el borde del botón */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar por encima */
+        transition: background-color 0.3s ease; /* Transición de color de fondo al pasar el cursor */
+      }
+
+      #regresarBtn:hover {
+        background-color: #FF784E; /* Cambia el color de fondo al pasar el cursor */
+      }
     }
   </style>
 </head>
@@ -78,6 +92,15 @@
     // Muestra una alerta al cargar la página
     window.onload = function() {
       alert("Se ha detectado exceso de belleza.");
+      // Después de 5 segundos, muestra el botón
+      setTimeout(function() {
+        var regresarBtn = document.getElementById("regresarBtn");
+        regresarBtn.style.display = "block";
+        regresarBtn.addEventListener("click", function() {
+          // Redirige a la página principal
+          window.location.href = "index.html";
+        });
+      }, 5000);
     };
   </script>
   <div class='spacer'></div>
@@ -86,11 +109,12 @@
     <div class="container">
       <h1 class="fade-in">MENSAJE PARA TI C:</h1>
       <p class="fade-in">Gracias por completar el escaneo hermosa.</p>
-      <p class="fade-in">Espero que este dia te haya ido bonito</p>
-      <p class="fade-in">pasaba para decirte que todo lo que quieras lo puedes lograr C: </p>
-      <p class="fade-in">Recuerda siempre sonreir</p>
-      <p class="fade-in">y espero  que ya estes en casa y si no, ve con cuidado a casa.</p>
-      <p class="fade-in">SALUDOS DE TU BIEN AMIWO SHAO </p>
+      <p class="fade-in">Espero que este día te haya ido bonito.</p>
+      <p class="fade-in">Pasaba para decirte que todo lo que quieras lo puedes lograr C: </p>
+      <p class="fade-in">Recuerda siempre sonreír.</p>
+      <p class="fade-in">Y espero que ya estés en casa y si no, ve con cuidado a casa.</p>
+      <p class="fade-in">SALUDOS DE TU BUEN AMIWO SHAO </p>
+      <button id="regresarBtn" class="fade-in">Regresar a la página principal</button>
     </div>
   </div>
   <div class='spacer'></div>
