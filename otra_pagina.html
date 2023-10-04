@@ -10,30 +10,30 @@
       font-family: Lato;
       font-weight: 600;
       color: rgb(22, 22, 26);
-      padding: 100px;
+      padding: 20px; /* Reduce el relleno en pantallas más pequeñas */
       background: linear-gradient(135deg, #00FFFF, #FFFF00);
+      margin: 0; /* Elimina el margen predeterminado */
     }
 
     /* Contenedor con bordes y sombra */
     .container {
       background-color: rgba(255, 255, 255, 0.2); /* Fondo con transparencia */
-      width: 800px; /* Ancho del contenedor */
-      height: 500px; /* Alto automático para adaptarse al contenido */
-      margin: 50px auto 0 auto; /* Margen superior de 50px y centrar horizontalmente */
+      max-width: 100%; /* Ancho máximo del contenedor */
+      margin: 20px; /* Margen en todos los lados */
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
       text-align: inherit; /* Centrar texto dentro del contenedor */
+      padding: 20px; /* Espacio interno del contenedor */
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 4vw; /* Tamaño de fuente en unidades vw (viewport width) */
       margin-bottom: 20px;
-      height: 0.5px;
-      padding: 90px;
+      padding: 2em 0; /* Añade relleno superior e inferior */
     }
 
     p {
-      font-size: 24px;
+      font-size: 2vw; /* Tamaño de fuente en unidades vw (viewport width) */
       margin-bottom: 10px;
     }
 
@@ -51,18 +51,46 @@
         opacity: 1;
       }
     }
+
+    /* Estilos para pantallas más pequeñas */
+    @media screen and (max-width: 768px) {
+      .container {
+        font-weight: 1000px;
+        margin: 0px; /* Margen más pequeño en pantallas pequeñas */
+        padding: 100px; /* Espacio interno más pequeño */
+      }
+      h1 {
+        font-size: 7vw;
+        padding: 1em 0;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      p {
+        font-size: 4.5vw; /* Tamaño de fuente en unidades vw (viewport width) */
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
+  <script>
+    // Muestra una alerta al cargar la página
+    window.onload = function() {
+      alert("Se ha detectado exceso de belleza.");
+    };
+  </script>
   <div class='spacer'></div>
   <div class='center'>
     <!-- Contenedor principal con bordes y sombra -->
     <div class="container">
-      <h1 class="fade-in">¡Oficialmente Somos Novios!</h1>
-      <p class="fade-in">Gracias por completar el escaneo.</p>
-      <p class="fade-in">Estamos emocionados de comenzar esta nueva etapa juntos.</p>
-      <p class="fade-in">Esperamos que disfrutes de nuestra boda.</p>
-      <p class="fade-in">¡Gracias por ser parte de este día especial!</p>
+      <h1 class="fade-in">MENSAJE PARA TI C:</h1>
+      <p class="fade-in">Gracias por completar el escaneo hermosa.</p>
+      <p class="fade-in">Espero que este dia te haya ido bonito</p>
+      <p class="fade-in">pasaba para decirte que todo lo que quieras lo puedes lograr C: </p>
+      <p class="fade-in">Recuerda siempre sonreir</p>
+      <p class="fade-in">y espero  que ya estes en casa y si no, ve con cuidado a casa.</p>
+      <p class="fade-in">SALUDOS DE TU BIEN AMIWO SHAO </p>
     </div>
   </div>
   <div class='spacer'></div>
