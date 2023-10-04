@@ -3,16 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
       document.getElementById("message").innerHTML = "Ponga su dedo";
       document.getElementById("message").classList.remove("hidden");
-      // Agregar evento de clic al escáner
-      document.querySelector(".scanner").addEventListener("click", function () {
-        // Iniciar cuenta regresiva de 10 segundos cuando se hace clic en el escáner
-        countdown(10, function () {
-          // Cuando termine la cuenta regresiva, cambia el mensaje y redirige
-          document.getElementById("message").innerHTML = "LISTO C:";
-          setTimeout(function () {
-            window.location.href = "otra_pagina.html";
-          }, 100); // Redirige después de 0.1 segundos (para demostración)
-        });
+      // Iniciar cuenta regresiva de 10 segundos para el escaneo
+      countdown(10, function () {
+        // Cuando termine la cuenta regresiva, cambia el mensaje y redirige
+        document.getElementById("message").innerHTML = "LISTO C:";
+        setTimeout(function () {
+          window.location.href = "otra_pagina.html";
+        }, 100); // Redirige después de 10 segundos
       });
     }, 2000);
   });
@@ -28,6 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
           callback();
         }
       }
-    }, 1000);
+    }, 3000);
   }
   
